@@ -38,6 +38,7 @@ def callback_query(call):
 def start(message):
     if message.chat.id not in user_responses.keys():
         user_responses[message.chat.id] = 0
+        points[message.chat.id] = 0
         send_question(message.chat.id)
 
 
